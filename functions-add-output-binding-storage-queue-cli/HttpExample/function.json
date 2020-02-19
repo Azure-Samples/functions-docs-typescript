@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "msg",
+      "queueName": "outqueue",
+      "connection": "AzureWebJobsStorage"
+    }
+  ],
+  "scriptFile": "../dist/HttpExample/index.js"
+}
